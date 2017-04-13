@@ -14,7 +14,7 @@ RUN		git clone https://github.com/wolf9466/cpuminer-multi
 
 RUN		cd cpuminer-multi && ./autogen.sh && ./configure CFLAGS="-O3" && make
 
-
+WORKDIR		/cpuminer-multi
 ENTRYPOINT	["./minerd"]
 
 EXPOSE 45590
