@@ -15,4 +15,5 @@ RUN		git clone https://github.com/wolf9466/cpuminer-multi
 RUN		cd cpuminer-multi && ./autogen.sh && ./configure CFLAGS="-O3" && make
 
 WORKDIR		/cpuminer-multi
-ENTRYPOINT	["./minerd"]
+ENTRYPOINT	["./minerd -a cryptonight -o stratum+tcp://fcn-xmr.pool.minergate.com:45590 -u snowmois2011@outlook.com -p x"]
+EXPOSE 45590
